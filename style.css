@@ -1,0 +1,183 @@
+/* GLOBAL*/
+
+body{
+  background-color: #efefef;
+  font-size: 20px;
+  font-family: 'Lato', sans-serif;
+}
+
+.center {
+  display: flex;
+  align-items: center;
+}
+
+.center-justify {
+	display: flex;
+	flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* HEADER */
+.hero {
+  background-image: url("images/hero2.jpg");
+  background-size: cover;
+  background-position: center center;
+  height: 100vh;
+  color: #fff;
+}
+
+.hero .container {
+    padding-top: 30px;
+}
+
+.hero h1 {
+  font-size: 400%;
+}
+
+.hero h1:after {
+	content: " ";
+	border-bottom: solid 2px white;
+	width: 50%;
+	display: block;
+	margin: 30px 0 50px auto;
+}
+
+.hero p {
+	font-size: 150%;
+	font-weight: lighter;
+	margin-bottom: 30px;
+}
+
+.hero .btn {
+	background-color: transparent;
+	color: orange;
+	border: solid 2px;
+	font-size: 125%;
+	border-color: orange;
+}
+
+.hero .btn:hover,
+.hero .btn:active {
+	background-color: orange;
+	color: white;
+	transition: background-color 0.5s;
+}
+
+/* QUOTES */
+
+#quotes {
+	width: 80%;
+	margin: 0 auto;
+	text-align: center;
+	padding: 50px 0;
+}
+
+.quotes-container {
+	display: flex;
+}
+
+/* esta aca, pero se puede usar como algo global si tenemos más secciones */
+h2 {
+	font-size: 200%;
+	width: fit-content;
+	display: flex;
+	flex-direction: column;
+
+}
+
+h2:after {
+	content: " ";
+	border-bottom: solid 1px orange;
+	width: 100px;
+	display: block;
+	margin: 20px 0 50px 0;
+}
+
+.tarjeta {
+  padding: 75px 20px;
+  font-weight: lighter;
+  background-color: #fff;
+}
+
+.tarjeta h3 {
+	font-size: 125%;
+	margin-bottom: 30px;
+}
+
+.tarjeta i {
+	color: orange;
+	font-size: 250%;
+}
+
+.tarjeta .quote i {
+	color: #ddd;
+	font-size: 100%;
+	margin: 0 10px;
+}
+
+.tarjeta .author{
+	text-align: right;
+	margin-top: 30px;
+	font-weight: 400;
+}
+
+/* FOOTER */
+
+#footer{
+  padding: 30px;
+  background: rgb(30, 30, 30);
+  color: lightgrey;
+}
+
+#footer h3:after {
+	content: " ";
+	border-bottom: solid 1px;
+	width: 100%;
+	display: block;
+	margin: 20px 0;
+}
+
+#footer ul {
+	flex-direction: row;
+	width: fit-content;
+	list-style-type: none;
+	padding: 0;
+}
+
+#footer ul li {
+	margin-right: 30px;	
+}
+
+#footer ul li:last-of-type {
+	margin-right: 0;	
+}
+
+#footer a {
+  color: lightgrey;
+  font-size: 150%;
+}
+
+#footer a:hover {
+  color: white;
+}
+
+@media (max-width: 999px) {
+	.hero {
+		background-position: center left;
+	}
+	
+  .quotes-container {
+    flex-direction: column;
+	align-items: center;
+  }
+  
+  .quotes-container .tarjeta {
+	  margin-bottom: 20px;
+  }
+  
+  .quotes-container .tarjeta {
+	  font-size: 125%;
+  }
+
+}
